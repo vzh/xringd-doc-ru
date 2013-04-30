@@ -1,0 +1,872 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-04-29 20:35+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: TH
+#: src/xringd.8:13
+#, no-wrap
+msgid "XRINGD"
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:14
+#, no-wrap
+msgid "NAME"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:16
+msgid "xringd - The Linux extended modem ring server"
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:16
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:24
+msgid "B<xringd> [ I<options> ] [ I<modem_device_file> ]"
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:24
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:36
+msgid ""
+"The xringd Linux extended Ring server will listen on a modem device for "
+"specific ring-delay patterns (sequences). Each sequence, when fully "
+"recognised, will execute a command you have chosen (subject to usual unix "
+"permissions). Delays are in fact delay ranges. Sequences and commands are "
+"read from a a configuration file.  I<xringd> does not disturb your other "
+"modem programs, not even your getty. It coexists with them.  I<xringd> "
+"probes (asynchronously) for the actual RING signal on the serial line."
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:37
+#, no-wrap
+msgid "OPTIONS"
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:38
+#, no-wrap
+msgid "B<-a >I< command_on_each_ring>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:42
+msgid ""
+"Run this command on every ring. Use perhaps to replace your boring phone "
+"ring."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:42
+#, no-wrap
+msgid "B<-c >I< config_file>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:46
+msgid "Use an alternate configuration file. The default is B</etc/xringd.conf>"
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:46
+#, no-wrap
+msgid "B<-d>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:51
+msgid ""
+"Run in debug mode (no daemon - logging = 100).  I<xringd> does not run as a "
+"daemon and produces log messages on standard error."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:51
+#, no-wrap
+msgid "B<-h | -?>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:54
+msgid "See a mini usage info"
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:54
+#, no-wrap
+msgid "B<-i msecs-ignored>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:61
+msgid ""
+"If consecutive rings have a time (in msec) distance less than this one, they "
+"are taken as one. For countries where a ring creates two sounds and modems "
+"that subsequently cause two changes on the serial RI line. Use this option "
+"to make two near RIs look as one to xringd. A value of 100-800 will most "
+"likely be the most appropriate."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:61
+#, no-wrap
+msgid "B<-l loglevel>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:66
+msgid ""
+"Logging level. Default=1. Use 10+ for more info. When running as daemon you "
+"can use -l 10 or 100 to get debug messages via syslog(LOG_DEBUG, ...).  0 "
+"means NO logging at all."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:66
+#, no-wrap
+msgid "B<-m >I< modem_device_file>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:69
+msgid "The modem device file (can also be given as the final argument)."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:69
+#, no-wrap
+msgid "B<-e>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:73
+msgid ""
+"Disables ECHO on modem device upon opening. This will avoid echo races "
+"reported with some modems."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:73
+#, no-wrap
+msgid "B<-n>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:79
+msgid ""
+"Performs only a syntax check of its configuration file. It implies -d. Try "
+"this first when you write a new configuration file.  I<xringd> does not "
+"become a daemon and produces log messages on standard error."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:79
+#, no-wrap
+msgid "B<-t >I< init_time>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:83
+msgid ""
+"After a reset (or the first time it is run), the time (in seconds) to wait "
+"until rings are accepted. Default: 15"
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:84
+#, no-wrap
+msgid "CONFIGURATION FILE"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:86
+msgid "The configuration file consists of lines of the following format:"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:88
+msgid "B<R secs[-secs] [ R secs[-secs] ] ... : command>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:101
+msgid ""
+"Each line is related to a sequence(pattern) that can be potentially "
+"matched. The I<command> at the end gets executed if the sequence was fully "
+"matched. A full match is found if the delays between the rings are within "
+"the delay ranges given in the configuration line of a sequence. A full match "
+"will also reset the state machine. It will start accepting new rings as when "
+"run the first time.  I<R> means ring and it should B<always> be the first "
+"symbol in a sequence."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:104
+msgid ""
+"Comment lines start with a ``#'' symbol at the beginning of the line.  Empty "
+"lines are ignored."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:110
+msgid ""
+"Note that command lines options can also be included in the config file.  A "
+"line should start with the '-' of an option. See example below.  Options -c "
+"and -n are ignored in the config file.  Options in the configuration file "
+"take precedence over the ones in the command line."
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:111
+#, no-wrap
+msgid "EXAMPLE CONFIGURATION"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:124
+#, no-wrap
+msgid ""
+"# xringd configuration file -- sample\n"
+"#\n"
+"-a /usr/local/audio/bin/play /usr/local/lib/sounds/ring.au\n"
+"-l 100\n"
+"#\n"
+"# 2 rings 10-16 sec apart followed by 30 secs silence\n"
+"R 10-16 R 30 : /etc/ppp/ppp.start office1\n"
+"# 3 rings 10-20 sec apart followed by 20 secs silence\n"
+"R 10-20 R 10-20 R 20 : /etc/ppp/ppp.start office2\n"
+"# 2 nearish rings then 1 ring after 20-26 secs, silence for 30 secs\n"
+"R 1-5 R 20-26 R 30 : /usr/local/bin/turn-heater on\n"
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:125
+#, no-wrap
+msgid "FILES"
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:126
+#, no-wrap
+msgid "B</etc/xringd.conf>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:129
+msgid "The default configuration file."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:129
+#, no-wrap
+msgid "B</dev/modem>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:132
+msgid "The default modem device used."
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:132
+#, no-wrap
+msgid "SIGNALS"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:136
+msgid ""
+"The following signals have the specified effect when sent to the I<xringd> "
+"process."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:136
+#, no-wrap
+msgid "B<SIGINT, SIGTERM>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:139
+msgid "Clean exit the server."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:139
+#, no-wrap
+msgid "B<SIGUSR1>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:142
+msgid "\"Simulates\" a RING as if it came from the modem."
+msgstr ""
+
+#. type: TP
+#: src/xringd.8:142
+#, no-wrap
+msgid "B<SIGHUP>"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:150
+msgid ""
+"Restart the internal machine ignoring any current state. Reread the config "
+"file. Close and reopen the modem device.  If a syntax error is found in a "
+"line all the following lines are ignored. So when you restart, make sure you "
+"look at the log for any reported errors. A better way is to always \"parse\" "
+"your config file with \"xringd -n\" to check its syntax first."
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:151
+#, no-wrap
+msgid "NOTES"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:161
+msgid ""
+"At the moment, I<xringd> is device dependent on Linux kernel 1.3.48+ and "
+"serial devices that support the TIOCMIWAIT, TIOCGICOUNT ioctl(2) "
+"calls. These were added by the same author to the Linux kernel so that a "
+"process can wait on a modem DCD,RI,DSR,CTS change on a serial port and can "
+"also read a kernel count of the interrupts on each one of these 4 lines. RI "
+"was used for this program.  (Other possibilities exist in using this ioctl "
+"for instrumentation projects.)  Note that these ioctls are only implemented "
+"for 16xx0 uarts now (Jan96)."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:168
+msgid ""
+"You B<have> to use a proper serial cable for this to work. A cable with all "
+"pins properly connected to your modem (especially the RI line for this "
+"program!)  and serial port will save you any trouble. Internal modems should "
+"normally work."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:176
+msgid ""
+"If you activate a program which uses the modem after ringd it should "
+"normally B<flush> the input buffer. In many cases you will have a few "
+"\"RING\" strings in your serial tty buffer that will most likely confuse a "
+"dialup script (eg. chat)."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:182
+msgid ""
+"The richness of the ring-delay pattern \"language\" is not great.  However, "
+"you certainly have many possibilities.  Beware of overlaps though, and "
+"always have something that will \"unlock\" any current sequence (eq. 4 "
+"consecutive rings that safely exit from any current state)."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:185
+msgid ""
+"If someone calls in while you are on the delay phase of your \"pattern\" "
+"then you are obviously out of luck."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:192
+msgid ""
+"Only tone dialing phones allow quick dial that can meet short timing "
+"restrictions possibly imposed by your configuration file. Make sure you use "
+"the redial button on the calling phone if there is one - you will be able to "
+"\"dial\" in about a second. Pulse dialers may introduce unexpected "
+"delays. If they are your only choice, use longer delays and wider delay "
+"ranges."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:201
+msgid ""
+"It was reported by a user that the \"rings\" you hear on the calling handset "
+"do not directly correspond to the ones actually heard on the receiving end.  "
+"In the tests done with xringd in a few countries, the number of rings "
+"remained the same on calling and called set. Just leave each one of the "
+"rings you hear on the calling end to \"settle\" (do not break them before "
+"they finish).  A delay between a ring heard on the caller set and the "
+"equivalent one on the called one was noticed but causes no problem for "
+"xringd. Feel free to send me your comments on this."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:206
+msgid ""
+"Many getty-like programs may be configured to pick up the phone on the first "
+"ring. Obviously, this will make xringd minimally useful.  Make your getty to "
+"reply after 2-4 rings so that you have many possibilities open for xringd."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:216
+msgid ""
+"pppd (and probably some other programs) like to hold a tty in exclusive "
+"mode.  Make sure you start xringd B<before> such programs, otherwise it "
+"won't be allowed to open the modem device.  Also, when such a program closes "
+"it may leave the line hung up. You need to restart (kill -HUP) xringd in "
+"such a case.  It does not make sense to run xringd on a line which is "
+"permanently used for PPP/SLIP - such a line never \"rings\"!"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:222
+msgid ""
+"Spurious interrupts (and thus pseudo-RINGs) may occur during modem switch "
+"on/off; run xringd B<after> your modem is switched on."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:229
+msgid ""
+"It is highly recommended - for security reasons - to make the configuration "
+"file inaccessible (even for read) to anything but xringd. Treat it as a "
+"shadow-password-like file. It is very easy for anyone to call your number "
+"and activate a command, if they know a RING-delay sequence \"password\". So "
+"try not to disarm your home-alarm via it.  You have been warned!"
+msgstr ""
+
+#. type: SH
+#: src/xringd.8:230
+#, no-wrap
+msgid "AUTHOR"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.8:231
+msgid "Angelo Haritsis (ah@doc.ic.ac.uk)."
+msgstr ""
+
+#. type: Plain text
+#: src/README:4
+#, no-wrap
+msgid ""
+"\t\t\t     Linux xringd\n"
+"\t\t\t\t    by\n"
+"\t\t      Angelo Haritsis <ah@doc.ic.ac.uk>\n"
+msgstr ""
+
+#. type: Plain text
+#: src/README:6
+#, no-wrap
+msgid ""
+"GENERAL\n"
+"-------\n"
+msgstr ""
+
+#. type: Plain text
+#: src/README:16
+msgid ""
+"How about having your home computer connect to your office or your provider, "
+"turn the air-conditioner on/off or activate _any_ command when you are not "
+"at home? Simple, you would say. Well, imagine now that your home modem does "
+"not have voice/DTMF-capabilities and you can use no modem to dialup your "
+"home. The only thing you ahve is a common telephone.  Furthermore (even if "
+"you DO have a modem), you might wish your home computer to execute a choice "
+"of different commands _without_ its modem going off hook (consequently not "
+"paying for any connection)."
+msgstr ""
+
+#. type: Plain text
+#: src/README:20
+msgid ""
+"xringd, the Extended Ring Daemon can do it for you. And a bit more.  It will "
+"monitor the serial line for RING signals and activate commands if specific "
+"\"ring-delay sequences\" are probed."
+msgstr ""
+
+#. type: Plain text
+#: src/README:25
+msgid ""
+"It will also allow you to execute a command per ring probed. This allows you "
+"to replace your boring phoneset rings with sounds from your sound card or "
+"even with messages displayed on screens on machine(s) on your network!"
+msgstr ""
+
+#. type: Plain text
+#: src/README:33
+msgid ""
+"How do you actually signal your linux machine to execute different commands? "
+"You just make it receive rings and delays between them that follow specific "
+"patterns (as defined in a configuration file). Different patterns activate "
+"different commands. For example: Produce a single ring, wait from 10-25 "
+"seonds, produce another single ring.  If no rings appear after this for 30 "
+"seconds your linux pc starts up a connection with your office1!"
+msgstr ""
+
+#. type: Plain text
+#: src/README:36
+msgid ""
+"You can build configuration files that can accept a wealth of ring-delay "
+"patterns and excute different commands upon recognition of each one."
+msgstr ""
+
+#. type: Plain text
+#: src/README:42
+msgid ""
+"xringd will NOT affect any programs using the serial line. It can even "
+"coexist with your getty. Just make sure that your getty does not pick up the "
+"phone too early so that it gives you some time to \"play\" with your ring "
+"\"patterns\". It uses 2 new ioctls found on official Linux kernels of "
+"version 1.3.48 and up (ioctl's implemented by the same author)."
+msgstr ""
+
+#. type: Plain text
+#: src/README:50
+msgid ""
+"The most inventive minds will probably make this work without even using a "
+"modem (I have no idea how easy it is to produce a circuit which will assert "
+"the RI line on a UART when the telephone rings - perhaps use the UART "
+"already taken by the mouse - RI is not used on it!).  If you have a useful "
+"idea on this, let me know so that I can include it with this package. But "
+"probably one could use an old 300/1200/2400bps modem and do the same job on "
+"lower cost!"
+msgstr ""
+
+#. type: Plain text
+#: src/README:52
+msgid "Make sure you read carefully the manual page provided."
+msgstr ""
+
+#. type: Plain text
+#: src/README:55
+msgid ""
+"Please try this program and send me any comments or bug reports/patches via "
+"email."
+msgstr ""
+
+#. type: Plain text
+#: src/README:58
+#, no-wrap
+msgid ""
+"TO INSTALL\n"
+"----------\n"
+msgstr ""
+
+#. type: Plain text
+#: src/README:63
+msgid ""
+"Change default installation dirs in Makefile if you wish.  Other defaults "
+"are mostly ok.  Type: make install"
+msgstr ""
+
+#. type: Plain text
+#: src/README:67
+msgid ""
+"You can run xringd as ANY user. The commands that it can execute are subject "
+"to the permision of the user running xringd. Usually you run it as root."
+msgstr ""
+
+#. type: Plain text
+#: src/README:73
+msgid ""
+"For debugging you should uncomment this line from Makefile "
+"#DBG=-DRINGSM_DEBUG and recompile ringsm.c Then you should run xringd as: "
+"xringd -c config -d Remember when building the final version to build "
+"ringsm.c with no debugging!"
+msgstr ""
+
+#. type: Plain text
+#: src/README:76
+#, no-wrap
+msgid ""
+"HARDWARE\n"
+"--------\n"
+msgstr ""
+
+#. type: Plain text
+#: src/README:83
+msgid ""
+"You will need a 16xx0x (most prevalent) uart (the needed kernel ioctls are "
+"currently implemented only for this family) and a fully connected modem "
+"cable if using an external modem (the RI line MUST be connected!).  16xx0x "
+"family includes: 8250 82450 16450 16450A 16c450 16550 16550A 16552 and "
+"compatible."
+msgstr ""
+
+#. type: Plain text
+#: src/README:85
+#, no-wrap
+msgid ""
+"KERNEL PATCH\n"
+"------------\n"
+msgstr ""
+
+#. type: Plain text
+#: src/README:91
+msgid ""
+"NB: This patch is NOT NEEDED! xinrgd has been tested to work fine on many "
+"setups and all the \"stock\" kernels after 1.3.48. It is just suggested as a "
+"quick thing to try if you have problems with xringd reporting errors "
+"endlessly."
+msgstr ""
+
+#. type: Plain text
+#: src/README:98
+#, no-wrap
+msgid ""
+"This kernel patch will make xringd not receive an EIO (or other) error on \n"
+"ioctl. The EIO case is taken care of in xringd. However, this patch will\n"
+"prevent any errors from the ioctl.\n"
+"drivers/char/tty_io.c, function hung_up_tty_ioctl(). Add before: return "
+"-EIO;\n"
+"\tif (cmd == TIOCMIWAIT || cmd == TIOCGICOUNT)\n"
+"\t\treturn tty_ioctl(inode, file, cmd, arg);  \n"
+msgstr ""
+
+#. type: Plain text
+#: src/README:100
+#, no-wrap
+msgid ""
+"THANKS\n"
+"------\n"
+msgstr ""
+
+#. type: Plain text
+#: src/README:107
+msgid ""
+"For beta testing and useful comments, I must not forget to extend my thanks "
+"to the following people: Richard Huveneers <huveneer@math.ruu.nl> Gary "
+"Houston <ghouston@actrix.gen.nz> Mattheos Papavasiliou "
+"<mattheos@archinet.demon.co.uk> Andrea Arcangeli <arcangeli@mbox.queen.it>"
+msgstr ""
+
+#. type: Plain text
+#: src/README:110
+#, no-wrap
+msgid "-------------------------------------------------------------------\n"
+msgstr ""
+
+#. type: Plain text
+#: src/README:112
+msgid "Copyright (c) 1995-1997 Angelo Haritsis. All rights reserved."
+msgstr ""
+
+#. type: Plain text
+#: src/README:117
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option)  "
+"any later version."
+msgstr ""
+
+#. type: Plain text
+#: src/README:122
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for "
+"more details."
+msgstr ""
+
+#. type: Plain text
+#: src/README:125
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program; see the file COPYING.  If not, write to the Free Software "
+"Foundation, 675 Mass Ave, Cambridge, MA 02139, USA."
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:1 src/xringd.conf:3 src/xringd.conf:7 src/xringd.conf:10 src/xringd.conf:12 src/xringd.conf:14
+#, no-wrap
+msgid "#\n"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:2
+#, no-wrap
+msgid "xringd configuration file -- sample"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:4
+#, no-wrap
+msgid "Line format:"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:5
+#, no-wrap
+msgid "R secs[-secs] [ R secs[-secs] ] ... : command"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:6
+#, no-wrap
+msgid "comments start with '#' in column 1 only"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:8
+#, no-wrap
+msgid "Pay attention to avoid overlapping events; xringd will only do a "
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:9
+#, no-wrap
+msgid "syntax (not a semantic) check on this file."
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:11
+#, no-wrap
+msgid "Allow a \"safe-exit\" ring sequence (eg 3 consecutive rings cancels it all)"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:13
+#, no-wrap
+msgid "Copyright (c) 1995-1996 Angelo Haritsis. All rights reserved."
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:16
+#, no-wrap
+msgid "command line options (-c -n silently ignored)"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:17
+#, no-wrap
+msgid "modem device"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:19
+msgid "-m /dev/ttyS0"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:19
+#, no-wrap
+msgid "#-a /usr/local/audio/bin/play /usr/local/lib/sounds/ring.au\n"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:21
+msgid "-a"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:21
+#, no-wrap
+msgid "rings this far are taken as one ring:"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:22
+#, no-wrap
+msgid "#-i 500\t\n"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:23
+#, no-wrap
+msgid "after resetting, time after we accept new sequences:"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:24
+#, no-wrap
+msgid "#-t 15\n"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:25
+#, no-wrap
+msgid "logging level:"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:26
+#, no-wrap
+msgid "#-l 100\n"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:28
+#, no-wrap
+msgid ""
+"2 rings 10-25 sec apart followed by 30 secs silence: ppp connect with "
+"office1"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:29
+#, no-wrap
+msgid "#R 10-25 R 30 : /etc/ppp/ppp.start office1\n"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:31
+#, no-wrap
+msgid "3 rings with 10-20 secs between each pair => ppp connect with office2"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:32
+#, no-wrap
+msgid "#R 10-20 R 10-20 R 30 : /etc/ppp/ppp.start office2\n"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:34
+#, no-wrap
+msgid "2 nearish rings then 1 ring after 20-26 secs, followed by no ring in"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:35
+#, no-wrap
+msgid "30 secs => heater on!"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:36
+#, no-wrap
+msgid "#R 1-6 R 10-16 R 8 : /usr/local/bin/turn-heater on\n"
+msgstr ""
+
+#. type: Title #
+#: src/xringd.conf:38
+#, no-wrap
+msgid "Debian default, can we say?"
+msgstr ""
+
+#. type: Plain text
+#: src/xringd.conf:39
+msgid "R 20-30 R 30 : /usr/bin/pon provider"
+msgstr ""

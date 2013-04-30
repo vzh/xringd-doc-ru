@@ -1,0 +1,4 @@
+PO4A-HEADER:mode=after;position=АВТОР$;beginboundary=\.SH
+
+.SH "ПЕРЕВОД"
+Перевод на русский язык: Владимир Жбанов <vzhbanov@gmail.com>.
